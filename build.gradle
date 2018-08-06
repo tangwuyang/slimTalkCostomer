@@ -15,9 +15,22 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
+        maven  {url "https://www.jitpack.io"}
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+ext{
+    // 版本号相关
+    versionCode = 1;
+    versionName = '1.0.0'
+
+    // 相关依赖库版本
+    supportVersion = '26.+'
+    butterknifeVersion = '8.5.1'
 }
